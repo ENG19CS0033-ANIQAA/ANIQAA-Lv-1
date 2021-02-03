@@ -1,7 +1,9 @@
 //Write the program to print "Hello World !"
-#include<stio.h>
+#include <stdio.h>
+
 int main()
 {
-  printf("aniqaa");
-  return 0;
+    printf("aniqaa");
+
+    return 0;
 }
