@@ -3,11 +3,10 @@
 
 int main()
 {
-    float h,b,d;
+    float h,b,d,vol;
     printf("Enter the values of h,b,d");
     scanf("%f%f%f",&h,&b,&d);
-    float vol=1/3*((h*d*b)+d/b);
+    vol=((h*d*b)+(d/b))/3;
     printf("The volume is %f",vol);
-
     return 0;
 }
