@@ -3,7 +3,7 @@
 
 int main()
 {
-    printf("aniqaa");
+    printf("aniqaa\n");
 
     return 0;
 }
