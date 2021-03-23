@@ -10,7 +10,7 @@ float input()
 float volume( float h,float b,float d)
 {
    float volume;
-   volume=((h*b*d)+(b/d))/3;
+   volume=((h*b*d)+(b/d))/3.0;
    return volume;
 }
 int output(float volume)
@@ -20,11 +20,11 @@ int output(float volume)
 }
 int main()
 {
-   float a,b,c,vol
+   float a,b,c,vol;
    a=input();
    b=input();
    c=input();
    vol=volume(a,b,c);
    output(vol);
-   return 0
+   return 0;
 }
