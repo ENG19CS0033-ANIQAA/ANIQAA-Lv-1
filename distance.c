@@ -1,4 +1,5 @@
 //WAP to find the distance between two point using 4 functions.
+
 #include<stdio.h>
 float two_d(float y1,float y2,float z1,float z2)
 {
