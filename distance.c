@@ -24,7 +24,7 @@ int main()
  p2=input();
  q1=input();
  q2=input();
- 1d=two_d(a1,a2,b1,b2);
+ 1d=two_d(p1,p2,q1,q2);
  output(1d);
  return 0;
 }
