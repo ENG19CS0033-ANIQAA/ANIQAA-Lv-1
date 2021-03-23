@@ -15,7 +15,7 @@ return sum;
 }
 void output(int p,int q,int r)
 {
-printf("Sum of %d + %d is %d\n",a,b,c);
+printf("Sum of %d + %d is %d\n",p,q,r);
 }
 int main()
 {
@@ -23,6 +23,6 @@ int a,b,c;
 a=input();
 b=input();
 c=find_sum(a,b);
-output(a,b,c)
+output(a,b,c);
 return 0;
 }
