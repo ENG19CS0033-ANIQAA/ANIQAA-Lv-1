@@ -2,14 +2,47 @@
 
 
 #include<stdio.h>
-int main()
+
+float
+input (float *arr, int *n)
 {
-    int a,b,s;
-    printf("Enter First Number: ");
-    scanf("%d",&a);
-    printf("Enter Second Number: ");
-    scanf("%d",&b);
-    s=a+b;
-    printf("Sum is: %d",s);
-    return(0);
+  printf ("Enter the total number of elements : \n");
+  scanf ("%d", n);
+
+  for (int i = 0; i < *n; i++)
+    {
+      printf ("Enter number %d : ", (i + 1));
+      scanf ("%f", &arr[i]);
+    }
+
+}
+
+float
+sum (float *arr, int *n)
+{
+  float sum;
+  for (int i = 0; i < *n; i++)
+    {
+      sum += *(arr + i);
+    }
+  return sum;
+}
+
+
+void
+output (float total)
+{
+  printf ("The sum of numbers entered is %.3f", total);
+}
+
+int
+main ()
+{
+  int *n;
+  float arr[100];
+  float total;
+  input (arr, n);
+  total = sum (arr, n);
+  output (total);
+  return 0;
 }
