@@ -1,53 +1,66 @@
 //WAP to find the sum of two fractions.
+
 #include<stdio.h>
 struct frac
 {
-float num,den;
+  int numerator;
+  int denominator;
 };
-struct frac input()
+
+struct frac
+sum (struct frac a, struct frac b)
 {
-struct frac n;
-printf("enter numerator");
-scanf("%f",&n.num);
-printf("enter denominator");
-scanf("%f",&n.den);
-return a;
+  struct frac res;
+  res.denominator = a.denominator * b.denominator;
+  res.numerator =
+    (a.numerator * b.denominator) + (b.numerator * a.denominator);
+  int gcd = hcf (res.numerator, res.denominator);
+  res.denominator = (res.denominator) / gcd;
+  res.numerator = (res.numerator) / gcd;
+  return res;
 }
-struct frac sm()
+
+int
+hcf (int a, int b)
 {
-struct frac a,struct frac b,struct frac res;
-float gcd;
-res.den=a.den*b.den;
-res.num=(a.num*b.den)+(b.num*a.den);
-gcd=hcf(res.num,res.den);
-res.deno=res.deno/gcd;
-res.num=res.num/gcd;
-return res;
+  int gcd = 1;
+  int i;
+  for (i = 2; i <= a && i <= b; i++)
+    {
+      if (a % i == 0 && b % i == 0)
+	gcd = i;
+    }
+  return gcd;
 }
-hcf(int a,int b)
+
+struct frac
+input ()
 {
-float gcd=1;
-float i=2
-do
+  struct frac a;
+  printf ("Enter the numerator\n");
+  scanf ("%d", &a.numerator);
+  printf ("Enter the denominator\n");
+  scanf ("%d", &a.denominator);
+  return a;
+}
+
+void
+output (struct frac a, struct frac b, struct frac c)
 {
-if(a%i==0&&b%i==0)
-gcd=i;
-i++;
+  printf ("The sum of %d/%d and %d/%d is%d/%d", a.numerator, a.denominator,
+	  b.numerator, b.denominator, c.numerator, c.denominator);
 }
-while(i<=a&&i<=b);
-return gcd;
-}
-void out(struct frac a,struct frac b,struct frac c)
+
+int
+main ()
 {
-printf("sum of %f %fand %f%f is %f%f",a.num,a.den,b.num,b.den,c.num,c.den);
+  struct frac a, b, c;
+  a = input ();
+  b = input ();
+  c = sum (a, b);
+  output (a, b, c);
+  return 0;
 }
-float main()
-{
-struc frac a,b,c;
-a=input();
-b=input();
-c=sm(a,b);
-out(a,b,c);
-return 0;
-}
+
+
 
