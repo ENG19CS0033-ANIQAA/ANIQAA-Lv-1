@@ -3,10 +3,10 @@
 
 #include<stdio.h>
 #include<math.h>
-float dist( float y1,float y2,float z1,float z2)
+float dist( float y1,float z1,float y2,float z2)
 {
     float d;
-    d= sqrt(((y2-y1)*(y2-y1))+((z2-z1)*(z2-z1)));
+    d= sqrt(((y2-y1) * (y2-y1))+((z2-z1) * (z2-z1)));
     return d;
 }
 float input()
